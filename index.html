@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверятель телефонав 2-00-0</title>
+</head>
+<body>
+    <h1>Введіть номер телефону</h1>
+    <form method="post">
+        <label for="phone_number">Номер телефону:</label>
+        <input type="text" id="phone_number" name="phone_number" required pattern="\+\d{3} \d{2} \d{7}">
+        <button type="submit">Перевірити</button>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
